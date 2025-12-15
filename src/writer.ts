@@ -1,7 +1,10 @@
 export class Writer{
   filename: string = ''
   connector: any
-  constructor(connector: any, filename: string = ''){ }
+  constructor(connector: any, filename: string = ''){
+    this.connector = connector
+    this.filename = filename
+  }
   async makefile(filename: string = ''){}
   async reset(filename: string = ''){}
   async hide(filename: string = ''){}

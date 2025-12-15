@@ -234,7 +234,6 @@ export class Connector {
       if (n !== 'writer') result[n] = globalOrders[name][n]
     }
     this.writerMaker(this.handler).message(JSON.stringify(result, null, 2))
-    //this.writerMaker(this.handler).message(JSON.stringify(globalOrders[name], null, 2))
   }
 
   show(name: string): string{
@@ -370,9 +369,9 @@ export class Connector {
   //},
 }
 
-export async function runoneline(connection: any, current: string, line: string, exitfunc: Function){
+export async function runoneline(connection: any, current: string, line: string, exitfunc: Function, filename: string | null = null){
   let conmaker = connection.getWriterMaker()
-  let writer = conmaker.maker(conmaker.handler)
+  let writer = conmaker.maker(conmaker.handler, filename)
   if (line === null) return
   const command = line.trim().split(' ')[0].trim()
   let content = line.trim().slice(command.length).trim()
