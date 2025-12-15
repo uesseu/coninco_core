@@ -38,7 +38,7 @@ export function nextId(id: string){
   return id
 }
 
-const helptexts = {all: `Ninco the free light weight AI agent by amateur person.
+const helptexts = {all: `Coninco the free light weight AI agent by amateur person.
 
 Usage:
     If you want to talk with AI, type as you like.
@@ -75,15 +75,15 @@ Example:
 It is specific for each environments.
 
 Example(vim):
-    Ninco @@ Please translate below to english. {}
+    Coninco @@ Please translate below to english. {}
 Example(deno):
-    Ninco @@ Please calculate \${hoge}
+    Coninco @@ Please calculate \${hoge}
 `,
 new: `Make new context.
 
 Make new context. It requires name of the context.
 Optionally, you can set JSON to configure the context.
-When ninco boot, it makes content named 'ai'.
+When coninco boot, it makes content named 'ai'.
 
 Example:
     @new AI {key: 'hogefugapiyo', model: 'gpt-5-nano'}
@@ -323,7 +323,7 @@ export class Connector {
     return await globalOrders[name].order(text, command)
   }
 
-  async ninco(text: string){
+  async coninco(text: string){
     await runoneline(this, current, text, ()=>{})
   }
 
