@@ -363,10 +363,6 @@ export class Connector {
     globalOrders[name].websearch(query, num, stringNum)
   }
 
-  //async better(name: string, command: string): Promise<void>{
-  //  const fname = await handler.eval('buffer_name()')
-  //  globalOrders[name].better(command, (await handler.eval(`getbufline('${fname}', 0, '$')`)).join('\n'), fname)
-  //},
 }
 
 export async function runoneline(connection: any, current: string, line: string, exitfunc: Function, filename: string | null = null){
